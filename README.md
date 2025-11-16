@@ -25,18 +25,18 @@ Vtracer.convert_image_to_svg("/path/to/file/input.jpg", "../can/relative/out_put
 
 Options:
 
-| Option                                          | Description                                                         |
-| ----------------------------------------------- | ------------------------------------------------------------------- |
-| **colormode** (`"color"`, `"binary"`)           | Defines how colors are interpreted during tracing.                  |
-| **hierarchical** (`"none"`, `"stacked"`)        | Enables layered tracing output when using color mode.               |
-| **mode** (`"spline"`, `"polygon"`, `"none"`)    | Chooses the path type for traced shapes.                            |
-| **filter_speckle** (0–16)                       | Removes small isolated pixel clusters (noise reduction).            |
-| **color_precision** (1–8)                       | Controls color quantization accuracy. Higher = more colors.         |
-| **layer_difference** (0–255)                    | Minimum color difference before a new layer is created.             |
-| **corner_threshold** (0–180)                    | Angular threshold for detecting corners in shapes.                  |
-| **length_threshold** (3.5–10.0)                 | Minimum curve length for spline simplification.                     |
-| **splice_threshold** (0–180)                    | Angle threshold used when merging segments.                         |
-| **path_precision** (integer ≥ 0)                | Controls the detail level of generated paths. Higher = more points. |
+| Option                                                | Description                                                         |
+| ------------------------------------------------------| ------------------------------------------------------------------- |
+| **colormode** (`"color"`, `"binary"`)                 | Defines how colors are interpreted during tracing.                  |
+| **hierarchical** (`"none"`, `"stacked"`)              | Enables layered tracing output when using color mode.               |
+| **mode** (`"spline"`, `"polygon"`, `"none"`)          | Chooses the path type for traced shapes.                            |
+| **filter_speckle** (0–16)                             | Removes small isolated pixel clusters (noise reduction).            |
+| **color_precision** (1–8)                             | Controls color quantization accuracy. Higher = more colors.         |
+| **layer_difference** (or gradient_step)(0–255)        | Minimum color difference before a new layer is created.             |
+| **corner_threshold** (0–180)                          | Angular threshold for detecting corners in shapes.                  |
+| **length_threshold** (or segment_length)(3.5–10.0)    | Minimum curve length for spline simplification.                     |
+| **splice_threshold** (0–180)                          | Angle threshold used when merging segments.                         |
+| **path_precision** (integer ≥ 0)                      | Controls the detail level of generated paths. Higher = more points. |
 
 
 [Learn more](https://github.com/visioncortex/vtracer)
