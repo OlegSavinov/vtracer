@@ -22,21 +22,22 @@ gem install vtracer
 ```ruby
 Vtracer.convert_image_to_svg("/path/to/file/input.jpg", "../can/relative/out_put.svg", layer_difference: 10, max_iterations: 25)
 ```
+                              &uarr;input file path       &uarr;output file path
 
 Options:
 
 | Option                                                | Description                                                         |
 | ------------------------------------------------------| ------------------------------------------------------------------- |
-| **colormode** (`"color"`, `"binary"`)                 | Defines how colors are interpreted during tracing.                  |
-| **hierarchical** (`"none"`, `"stacked"`)              | Enables layered tracing output when using color mode.               |
-| **mode** (`"spline"`, `"polygon"`, `"none"`)          | Chooses the path type for traced shapes.                            |
-| **filter_speckle** (0–16)                             | Removes small isolated pixel clusters (noise reduction).            |
-| **color_precision** (1–8)                             | Controls color quantization accuracy. Higher = more colors.         |
-| **layer_difference** (or gradient_step)(0–255)        | Minimum color difference before a new layer is created.             |
-| **corner_threshold** (0–180)                          | Angular threshold for detecting corners in shapes.                  |
-| **length_threshold** (or segment_length)(3.5–10.0)    | Minimum curve length for spline simplification.                     |
-| **splice_threshold** (0–180)                          | Angle threshold used when merging segments.                         |
-| **path_precision** (integer ≥ 0)                      | Controls the detail level of generated paths. Higher = more points. |
+| **colormode** (`"color"`, `"binary"`)                 | True color image `color` (default) or Binary image `bw`             |
+| **color_precision** (1–8)                             | Number of significant bits to use in an RGB channel                 |
+| **corner_threshold** (0–180)                          | Minimum momentary angle (degree) to be considered a corner          |
+| **filter_speckle** (0–16)                             | Discard patches smaller than X px in size                           |
+| **layer_difference** (or gradient_step)(0–255)        | Color difference between gradient layers                            |
+| **hierarchical** (`"none"`, `"stacked"`)              | Hierarchical clustering `stacked` (default) or non-stacked `cutout`. Only applies to color mode.|
+| **mode** (`"spline"`, `"polygon"`, `"none"`)          | Curver fitting mode `pixel`, `polygon`, `spline`                    |
+| **path_precision** (integer ≥ 0)                      | Number of decimal places to use in path string                      |
+| **length_threshold** (or segment_length)(3.5–10.0)    | Perform iterative subdivide smooth until all segments are shorter than this length|
+| **splice_threshold** (0–180)                          | Minimum angle displacement (degree) to splice a spline              |
 
 
 [Learn more](https://github.com/visioncortex/vtracer)
