@@ -7,13 +7,13 @@ This gem is a wrapper of a rust library [VTracer](https://github.com/visioncorte
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add TODO
+bundle add vtracer
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install TODO
+gem install vtracer
 ```
 
 ## Usage
