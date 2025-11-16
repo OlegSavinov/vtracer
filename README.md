@@ -22,7 +22,7 @@ gem install vtracer
 ```ruby
 Vtracer.convert_image_to_svg("/path/to/file/input.jpg", "../can/relative/out_put.svg", layer_difference: 10, max_iterations: 25)
 ```
-                              ↑ input file path           ↑ output file path
+
 Options:
 
 | Option                                                | Description                                                         |
