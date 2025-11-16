@@ -1,0 +1,7 @@
+[workspace]
+members = ["ext/*"]
+resolver = "2"
+
+[workspace.dependencies]
+magnus = { version = "0.7", features = ["rb-sys"] }
+url = "2.5"

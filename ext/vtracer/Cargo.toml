@@ -1,0 +1,19 @@
+[package]
+name = "vtracer"
+version = "0.1.0"
+edition = "2021"
+authors = ["Oleg Savinov <gsavinov1@gmail.com>"]
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+magnus = { version = "0.7", features = ["rb-sys"] }
+visioncortex = "0.8.9"
+
+vtracer = "0.6.5"
+
+[build-dependencies]
+rb-sys-env = "0.1"
